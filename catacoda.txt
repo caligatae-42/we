@@ -1,0 +1,39 @@
+PS1="\u:\w\$ "
+useradd -m -d /home/ekrem  -s /bin/bash -G sudo ekrem
+ su ekrem
+
+root:~$ useradd -m -d /home/ekrem  -s /bin/bash -G sudo ekrem 
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ekrem@host01:/root$ cd
+ekrem@host01:~$ pwd
+/home/ekrem
+ekrem@host01:~$ git --version
+git version 2.7.4
+
+ekrem@host01:~$ git config --global user.name "ekrem"
+ekrem@host01:~$ git config --global user.email "ekremakkaymak42@gmail.com"
+ekrem@host01:~$ git config --global core.editor "nano"
+ekrem@host01:~$ git config --list
+esar.name=ekrem
+user.name=ekrem
+user.email=ekremakkaymak42@gmail.com
+core.editor=nano
+ekrem@host01:~$ mkdir project
+ekrem@host01:~$ cd project/
+ekrem@host01:~/project$ mkdir first_project
+ekrem@host01:~/project$ cd first_project/
+ekrem@host01:~/project/first_project$ ll
+total 8
+drwxrwxr-x 2 ekrem ekrem 4096 Mar  5 14:22 ./
+drwxrwxr-x 3 ekrem ekrem 4096 Mar  5 14:22 ../
+ekrem@host01:~/project/first_project$ git init
+Initialised empty Git repository in /home/ekrem/project/first_project/.git/
+ekrem@host01:~/project/first_project$ ll
+total 12
+drwxrwxr-x 3 ekrem ekrem 4096 Mar  5 14:23 ./
+drwxrwxr-x 3 ekrem ekrem 4096 Mar  5 14:22 ../
+drwxrwxr-x 7 ekrem ekrem 4096 Mar  5 14:23 .git/
+ekrem@host01:~/project/first_project$ 
+su ekrem
